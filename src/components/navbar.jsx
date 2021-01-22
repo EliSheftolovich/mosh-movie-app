@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
-class NavBar extends Component {
+class NavBar extends React.Component {
     render() { 
         return ( 
-            <nav className="nav navbar-light bg-light">
-                <a className="nav-link " href="#">NavBar</a>
+            <nav className="navbar navbar-light bg-light">
+                <a className="navbar-brand " href="#">
+                    NavBar <span className="badge badge-pill badge-secondary">
+                        {this.props.totalCounters}
+                    </span>
+                 </a>
             </nav>
          );
     }
